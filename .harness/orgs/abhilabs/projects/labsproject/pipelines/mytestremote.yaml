@@ -23,7 +23,10 @@ pipeline:
                     source:
                       type: Inline
                       spec:
-                        script: echo helloa
+                        script: |-
+                          echo helloa
+
+                          echo <+<+pipeline.variables.someVar>.substring(0,12)>
                     environmentVariables: []
                     outputVariables: []
                   timeout: 10m
