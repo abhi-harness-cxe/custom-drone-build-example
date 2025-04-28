@@ -31,3 +31,9 @@ pipeline:
                     outputVariables: []
                   timeout: 10m
         tags: {}
+  variables:
+    - name: someVar
+      type: String
+      description: ""
+      required: false
+      value: abhisheksahu1234
