@@ -26,6 +26,8 @@ pipeline:
                         script: |-
                           echo helloa
 
+                          echo <+pipeline.branch>
+
                           echo <+<+pipeline.variables.someVar>.substring(0,12)>
                     environmentVariables: []
                     outputVariables: []
