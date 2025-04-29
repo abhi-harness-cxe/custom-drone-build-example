@@ -14,20 +14,9 @@ pipeline:
           execution:
             steps:
               - step:
-                  type: ShellScript
                   name: ShellScript_1
                   identifier: ShellScript_1
-                  spec:
-                    shell: Bash
-                    executionTarget: {}
-                    source:
-                      type: Inline
-                      spec:
-                        script: |-
-                          echo hello
-
-                          echo <+pipeline.branch>
-                    environmentVariables: []
-                    outputVariables: []
-                  timeout: 10m
+                  template:
+                    templateRef: pipebrnahc
+                    versionLabel: "1"
         tags: {}
